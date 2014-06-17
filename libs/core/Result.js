@@ -1,7 +1,7 @@
 module.exports=Result;
 var Writable=require("stream").Writable;
 var util=require("util");
-var iconv = require('iconv-lite');
+var iconv = require('iconv');
 
 iconv.extendNodeEncodings()
 
