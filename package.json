@@ -8,10 +8,12 @@
     "type": "git",
     "url": "https://github.com/Keyang/node-csvtojson.git"
   },
-  "contributors": [{
-    "name": "Keyang Xiang",
-    "email": "keyang.xiang@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Keyang Xiang",
+      "email": "keyang.xiang@gmail.com"
+    }
+  ],
   "version": "0.3.10",
   "keywords": [
     "csv",
@@ -24,11 +26,16 @@
   "bin": {
     "csvtojson": "./bin/csvtojson"
   },
-  "license": [{
-    "type": "MIT",
-    "url": "https://github.com/Keyang/node-csvtojson/blob/master/LICENSE"
-  }],
-  "engines":{
-    "node":">=0.10"
+  "license": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Keyang/node-csvtojson/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "iconv": "^2.1.4"
   }
 }

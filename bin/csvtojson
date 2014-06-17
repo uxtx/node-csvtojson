@@ -2,6 +2,7 @@
 
 var web = require("../libs/interfaces").web
 var Converter = require("../libs/core").Converter;
+var iconv = require('iconv-lite');
 var converter = new Converter({
     constructResult: false
 });
@@ -11,8 +12,10 @@ var fs = require("fs");
 var ws = process.stdout;
 var sin = process.stdin;
 var started = false;
+
+iconv.extendNodeEncodings()
 // process.stdin.resume();
-process.stdin.setEncoding('utf8');
+process.stdin.setEncoding('latin1');
 var parsedCmd = commandParser();
 
 if (parsedCmd.cmd == "parse") {

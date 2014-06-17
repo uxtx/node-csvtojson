@@ -1,6 +1,9 @@
 module.exports=Result;
 var Writable=require("stream").Writable;
 var util=require("util");
+var iconv = require('iconv-lite');
+
+iconv.extendNodeEncodings()
 
 function Result(){
   Writable.call(this);
@@ -9,7 +12,7 @@ function Result(){
 util.inherits(Result,Writable);
 Result.prototype._write=function(data,encoding,cb){
   if (encoding=="buffer"){
-    encoding="utf8";
+    encoding="latin1";
   }
   this.buffer+=data.toString(encoding);
   cb();

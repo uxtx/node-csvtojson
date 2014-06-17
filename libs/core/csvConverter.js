@@ -8,7 +8,9 @@ var Readable = require("stream").Readable;
 var Result = require("./Result");
 var os = require("os");
 var eol = os.EOL;
+var iconv = require('iconv-lite');
 
+iconv.extendNodeEncodings()
 function csvAdv(params) {
     Transform.call(this);
     var _param = {
@@ -58,7 +60,7 @@ csvAdv.prototype._isToogleQuote = function(segment) {
 csvAdv.prototype._transform = function(data, encoding, cb) {
     var self = this;
     if (encoding == "buffer") {
-        encoding = "utf8";
+        encoding = "latin1";
     }
 
     this._buffer += data.toString(encoding);
