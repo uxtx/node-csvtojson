@@ -123,7 +123,7 @@ csvAdv.prototype._rowProcess = function(row, index, resultRow) {
 csvAdv.prototype.fromString = function(csvString, cb) {
     var rs = new Readable();
     rs._read = function() {
-        this.push(csvString);
+        this.push(csvString, 'latin1');
         this.push(null);
     }
     rs.pipe(this);
