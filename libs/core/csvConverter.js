@@ -8,7 +8,7 @@ var Readable = require("stream").Readable;
 var Result = require("./Result");
 var os = require("os");
 var eol = os.EOL;
-var iconv = require('iconv');
+var iconv = require('iconv-lite');
 
 iconv.extendNodeEncodings()
 function csvAdv(params) {

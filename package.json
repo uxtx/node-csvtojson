@@ -36,6 +36,7 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "iconv": "^2.1.4"
+    "iconv": "^2.1.4",
+    "iconv-lite": "^0.4.3"
   }
 }
